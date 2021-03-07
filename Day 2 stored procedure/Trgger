@@ -1,0 +1,10 @@
+CREATE TRIGGER trgger AFTER INSERT, DELETE AS BEGIN SET NOCOUNT ON;
+INSERT INTO Deets(
+name;
+Gender;        
+)
+SELECT 
+name;
+Gender;
+FROM Deets 
+END
