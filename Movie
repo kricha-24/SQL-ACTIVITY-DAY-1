@@ -1,4 +1,4 @@
-CREATE DATABASE movie;
+CREATE TABLE movie;
 INSERT INTO movie VALUES ('201','Bahubali-The_Beginning','Prabhas','Tamannah','10/07/15','Telugu','21','Drama_Fantasy','9091');
 INSERT INTO movie VALUES ('501','2.0','Rajnikanth','Amy','29/11/18','Tamil','20','Scientific','8892');
 INSERT INTO movie VALUES ('577','Aval','Siddharth','Andrea','3/11/17','Tamil','14','Horror','1899');
