@@ -1,1 +1,1 @@
-# SQL-ACTIVITY-DAY-1
+# SQL Activity
