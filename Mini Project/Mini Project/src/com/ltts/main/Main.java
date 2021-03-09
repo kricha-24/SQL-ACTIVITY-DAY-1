@@ -62,26 +62,12 @@ if(id==1){
 	     String nnnname=br.readLine();
 	     System.out.println("Enter Player PowerRating");
 	     double pppppno=Double.parseDouble(br.readLine());
-	  //  boolean b =ttd.createTeams();
 	    System.out.println("Enter Team ID: ");
 	    int tno=Integer.parseInt(br.readLine());
 	    ttd.displayTeams();
-	     
-	
-	//calling player objects
 	      t= new Player(pno,name,ppno,nname,pppno,nnname,ppppno,nnnname,pppppno,tno);
-
-
-				     
-		//checking sucessfull or not
-		
 		  td.insertPlayer(t); 
 
-		 //System.out.println("susccessfully"+y);
-	/*	//calling team objects
-		//checking succesfull or not
-		       boolean x=ttd.insertTeam(tt);
-		       System.out.println("susccessfully"+x);*/
 }
 if(id==2)		  
 		  {	
