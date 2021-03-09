@@ -1,7 +1,5 @@
 package com.ltts.model;
-
 import java.util.Date;
-
 public class Player {
 	private int playerId;
 	private String name;
@@ -13,7 +11,7 @@ public class Player {
 	private String nationality;
 	private double powerRating;
 	private int teamId;
-
+	
 	public Player() {
 		super();
 	}
@@ -91,5 +89,4 @@ public class Player {
 	public void setTeamId(int teamId) {
 		this.teamId = teamId;
 	}
-
 }
