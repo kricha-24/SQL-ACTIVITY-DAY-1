@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class MyConnection {
 	public static Connection getConnection() throws Exception {
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ipl","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/miniproject","root","root");
 		
 		return con;
 	}
