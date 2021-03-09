@@ -1,5 +1,4 @@
 package com.ltts.model;
-
 public class Team {
 	
 	private int teamId;
@@ -31,29 +30,22 @@ public class Team {
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
 	}
-
 	public String getOwnerName() {
 		return ownerName;
 	}
-
 	public void setOwnerName(String ownerName) {
 		this.ownerName = ownerName;
 	}
-
 	public String getCoach() {
 		return coach;
 	}
-
 	public void setCoach(String coach) {
 		this.coach = coach;
 	}
-
 	public int getCaptainId() {
 		return captainId;
 	}
-
 	public void setCaptainId(int captainId) {
 		this.captainId = captainId;
 	}
-	
 }
