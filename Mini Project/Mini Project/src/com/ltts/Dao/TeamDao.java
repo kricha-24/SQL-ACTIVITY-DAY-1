@@ -1,4 +1,4 @@
-package com.ltts.Dao;
+package com.ltts.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +9,8 @@ import java.util.List;
 import com.ltts.config.MyConnection;
 import com.ltts.model.Team;
 
-public class TeamDao {
+
+public class TeamDAO {
 	public List<Team> getAllTeams(){
 		List<Team> li=new ArrayList<Team>();
 		
@@ -33,6 +34,7 @@ public boolean createTeams() throws Exception {
 	return ps.execute();
 	
 }
+
 public void insertTeams() throws Exception {
 	Connection mc=MyConnection.getConnection();
 	
@@ -93,6 +95,7 @@ public void updateTCoach(Team t) throws Exception {
 		System.out.println("Team Coach successfully updated.");
 	}
 }
+
 public void displayTeams() throws Exception {
 	Connection mc=MyConnection.getConnection();
 	
