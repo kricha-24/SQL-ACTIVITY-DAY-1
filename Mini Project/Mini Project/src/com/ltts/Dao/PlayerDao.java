@@ -1,4 +1,4 @@
-package com.ltts.Dao;
+package com.ltts.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import com.ltts.config.MyConnection;
 import com.ltts.model.Player;
 import com.ltts.model.Team;
 
-public class PlayerDao {
+public class PlayerDAO {
 	public List<Player> getAllPlayers(){
 		List<Player> li=new ArrayList<Player>();
 		
@@ -44,10 +44,14 @@ public void insertPlayer(Player p) throws Exception {
 	Statement stmt = mc.createStatement();
 	PreparedStatement ps=mc.prepareStatement("insert into player values(?,?,?,?,?,?,?,?,?,?);");
 	  ps.setInt(1,p.getPlayerId());
-	  ps.setString(2,p.getName()); ps.setString(3,p.getDateOfBirth());
-	  ps.setString(4,p.getSkill()); ps.setInt(5,p.getNumberOfMatches());
-	  ps.setInt(6,p.getRuns()); ps.setInt(7,p.getWickets());
-	  ps.setString(8,p.getNationality()); ps.setDouble(9,p.getPowerRating());
+	  ps.setString(2,p.getName()); 
+	  ps.setString(3,p.getDateOfBirth());
+	  ps.setString(4,p.getSkill()); 
+	  ps.setInt(5,p.getNumberOfMatches());
+	  ps.setInt(6,p.getRuns()); 
+	  ps.setInt(7,p.getWickets());
+	  ps.setString(8,p.getNationality());
+	  ps.setDouble(9,p.getPowerRating());
 	  ps.setInt(10,p.getTeamId());
 	 
 	 System.out.println(p.getName());
@@ -69,13 +73,13 @@ public void searchPlayer(Player p) throws Exception{
 	Connection mc=MyConnection.getConnection();
 	Statement stmt = mc.createStatement();
 	
-	PreparedStatement ps = mc.prepareStatement("select p.name, t.teamName, t.coachname, p.date, t.captainid from player p,team t  where p.teamId=t.teamId && p.playerId = (?);");
+	PreparedStatement ps = mc.prepareStatement("select p.name, p.skill, p.nationality, p.dateOfBirth, p.runs from player p, team t  where p.teamId=t.teamId && p.playerId = (?);");
 	
 	 ps.setInt(1,p.getPlayerId());
 	ResultSet rs = ps.executeQuery();
 	
 	while(rs.next()){
-		System.out.println(rs.getString(1)+" " + rs.getString(2)+" " + rs.getString(3)+" " + rs.getString(4)+" " + rs.getString(5));
+		System.out.println(rs.getString(1)+" " + rs.getString(2)+" " + rs.getString(3)+" " + rs.getString(4)+" " + rs.getInt(5));
 	}
 	
 	mc.close();	
