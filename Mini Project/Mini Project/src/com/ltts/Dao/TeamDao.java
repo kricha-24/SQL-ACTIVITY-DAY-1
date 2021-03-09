@@ -71,8 +71,6 @@ public void updateTCoach(Team t) throws Exception {
 	Statement s = mc.createStatement();
 	
 	PreparedStatement ps=mc.prepareStatement("update team set coachname = (?)  where teamid = (?); ");
-	
-	//ResultSet rs = s.executeQuery("select * from Team");
 	ps.setString(1,t.getCoach());
 	ps.setInt(2,t.getTeamId());
 	boolean rs = ps.execute();
