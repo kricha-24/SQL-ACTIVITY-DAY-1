@@ -28,9 +28,6 @@ public boolean createTeams() throws Exception {
 	Connection mc=MyConnection.getConnection();
 	
 	PreparedStatement ps=mc.prepareStatement("create table if not exists team(teamId int(2) primary key , teamName varchar(20))");
-	
-	//ps.setInt(1,getPlayerId());
-	//ps.setString(2,getPlayerName());
 	return ps.execute();
 	
 }
@@ -42,15 +39,8 @@ public void insertTeams() throws Exception {
 	
 	PreparedStatement ps=mc.prepareStatement("insert into team  (teamId,teamName) values (1,'CSK'),(2,'DC'),(3,'KKR'),(4,'KXIP'),(5,'MI'),(6,'RCB'),(7,'RR'),(8,'SRH')");
 	
-	//ResultSet rs = s.executeQuery("select * from Team");
-	
 	System.out.println("Record is inserted");
 	 ps.executeUpdate();
-	
-	//ps.setInt(1,getPlayUerId());
-	//ps.setString(2,getPlayerName());
-	//ResultSet rs =s.executeQuery(null);
-	//return s.execute(null);
 	
 }
 
